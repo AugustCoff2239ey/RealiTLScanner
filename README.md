@@ -35,9 +35,11 @@ It is recommended to run this tool locally, as running the scanner in the cloud 
 ./RealiTLScanner -addr www.microsoft.com -out file.csv
 
 # Set a thread count, default: 1
+# Tip: I usually use -thread 20 for faster scanning on a local machine
 ./RealiTLScanner -addr wiki.ubuntu.com -thread 10
 
 # Set a timeout for each scan, default: 10 (seconds)
+# Tip: 5s timeout works well for most cases and speeds things up noticeably
 ./RealiTLScanner -addr 107.172.1.1/16 -timeout 5
 ```
 ### In docker way
@@ -77,14 +79,5 @@ Example output file:
 ```csv
 IP,ORIGIN,CERT_DOMAIN,CERT_ISSUER,GEO_CODE
 202.70.64.2,ntc.net.np,*.ntc.net.np,"GlobalSign nv-sa",NP
-196.200.160.70,mirror.marwan.ma,mirror.marwan.ma,"Let's Encrypt",MA
-103.194.167.213,mirror.i3d.net,*.i3d.net,"Sectigo Limited",JP
-194.127.172.131,nl.mirrors.clouvider.net,nl.mirrors.clouvider.net,"Let's Encrypt",NL
-202.36.220.86,mirror.2degrees.nz,mirror.2degrees.nz,"Let's Encrypt",NZ
-202.36.220.86,ubuntu.mirrors.theom.nz,mirror.2degrees.nz,"Let's Encrypt",NZ
-158.37.28.65,ubuntu.hi.no,alma.hi.no,"Let's Encrypt",NO
-193.136.164.6,ftp.rnl.tecnico.ulisboa.pt,ftp.rnl.ist.utl.pt,"Let's Encrypt",PT
-75.2.60.5,cesium.di.uminho.pt,cesium.di.uminho.pt,"Let's Encrypt",US
-195.14.50.21,mirror.corbina.net,ftp.corbina.net,"Let's Encrypt",RU
+196.200.160.70,mirror.marwan.ma
 ```
-
